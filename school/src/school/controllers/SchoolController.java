@@ -14,7 +14,7 @@ import school.models.SchoolDAO;
 import school.models.SchoolDTO;
 
 
-@WebServlet("/dept")
+@WebServlet("/schoolsignal")
 public class SchoolController extends HttpServlet {
 
 	@Override
