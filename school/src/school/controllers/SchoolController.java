@@ -13,12 +13,7 @@ import javax.servlet.http.HttpServlet;
 import school.models.SchoolDAO;
 import school.models.SchoolDTO;
 
-<<<<<<< HEAD
-
-@WebServlet("/school")
-=======
-@WebServlet("/schoolsignal")
->>>>>>> branch 'master' of https://github.com/jejucityboy/schoolsignal.git
+@WebServlet("/schoolSignal")
 public class SchoolController extends HttpServlet {
 
 	@Override
@@ -28,13 +23,8 @@ public class SchoolController extends HttpServlet {
 
 		request.setAttribute("list", list);
 		request.setAttribute("title", "학교위치");
-<<<<<<< HEAD
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("schoolSignal/kakaoAPI.jsp");
-=======
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/SchoolLocation.jsp");
->>>>>>> branch 'master' of https://github.com/jejucityboy/schoolsignal.git
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/schoolSignal/kakaoAPI.jsp");
 		dispatcher.forward(request, response);
 	}
 

@@ -1,7 +1,7 @@
-package Croll;
+package crawling;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -23,12 +23,12 @@ public class News {
 		Iterator<Element> ie1 = element.select("div.wrap_tit").iterator(); //제목
 		Iterator<Element> ie2 = element.select("a.f_link_b").iterator(); //링크
 		Iterator<Element> ie4 = element.select("img.thumb_img").iterator(); //이미지
-		Iterator<Element> ie3 = element.select("P.f_eb desc").iterator(); //내용
+		Iterator<Element> ie3 = element.select("p.f_eb").iterator(); //내용
 		
 		while (ie1.hasNext()) {
-			System.out.println(ie1.next().text()+"\n"+ie2.next().attr("href")+"\n");
-					//+"\n"+ie3.next().text());
-					//+"\n"+ie4.next().attr("src"));
+			System.out.println(ie1.next().text()+"\n"+ie2.next().attr("href")+"\n"
+					+ie3.next().text()
+					+"\n"+ie4.next().attr("src"));
 			System.out.println();
 		}
 		System.out.println("============================================================");
