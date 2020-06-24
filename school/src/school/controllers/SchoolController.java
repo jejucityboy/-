@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import school.models.SchoolDAO;
 import school.models.SchoolDTO;
 
-
 @WebServlet("/schoolsignal")
 public class SchoolController extends HttpServlet {
 
@@ -21,10 +20,10 @@ public class SchoolController extends HttpServlet {
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
 		SchoolDAO deptDAO = SchoolDAO.getInstance();
 		List<SchoolDTO> list = deptDAO.getDeptList();
-		
+
 		request.setAttribute("list", list);
 		request.setAttribute("title", "학교위치");
-		
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/SchoolLocation.jsp");
 		dispatcher.forward(request, response);
 	}
