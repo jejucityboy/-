@@ -14,7 +14,7 @@ import school.models.SchoolDAO;
 import school.models.SchoolDTO;
 
 
-@WebServlet("/dept")
+@WebServlet("/school")
 public class SchoolController extends HttpServlet {
 
 	@Override
@@ -25,7 +25,7 @@ public class SchoolController extends HttpServlet {
 		request.setAttribute("list", list);
 		request.setAttribute("title", "학교위치");
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/SchoolLocation.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("schoolSignal/kakaoAPI.jsp");
 		dispatcher.forward(request, response);
 	}
 
