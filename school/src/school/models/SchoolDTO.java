@@ -31,6 +31,7 @@ public class SchoolDTO implements Serializable {
 		this.sh_name = sh_name;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "DeptDTO [sh_location1=" + sh_location1 + ", sh_location2=" + sh_location2 + ", sh_name=" + sh_name
