@@ -27,6 +27,8 @@ public class SchoolDAO {
 		}
 
 	}
+	
+	
 
 	public List<SchoolDTO> getDeptList() {
 

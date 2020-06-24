@@ -26,6 +26,7 @@ public class SchoolController extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/schoolSignal/kakaoAPI.jsp");
 		dispatcher.forward(request, response);
+		
 	}
 
 }
