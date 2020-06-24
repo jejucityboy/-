@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/ jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,7 @@
 	var mapContainer = document.getElementById('map'), // 지도의 중심좌표
 	mapOption = {
 		center : new kakao.maps.LatLng(37.456129, 126.705233), // 지도의 중심좌표
-		level : 10
+		level : 3
 	// 지도의 확대 레벨
 	};
 
@@ -47,7 +47,7 @@
 		<c:forEach items="${list}" var="dto" varStatus="st">
 		<c:if test="${st.index != 0}">,</c:if>
 		{
-		    content: '${dto.sh_name}', 	
+		    content: '${dto.sh_name}', 
 		    latlng: new kakao.maps.LatLng(${dto.sh_location1}, ${dto.sh_location2 })
 		}
 		</c:forEach>	];
