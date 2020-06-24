@@ -57,7 +57,7 @@
       <c:if test="${st.index != 0}">,</c:if>
       {
           content: '${dto.sh_name}', 
-          latlng: new kakao.maps.LatLng(${dto.sh_location1}, ${dto.sh_location2 })
+          latlng: new kakao.maps.LatLng(${dto.sh_location1}, ${dto.sh_location2})
       }
       </c:forEach>   ];
 
