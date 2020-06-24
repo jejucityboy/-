@@ -38,6 +38,35 @@
 
 	<script>
 
+<<<<<<< HEAD
+</div>
+<div id="map" style="width:1150px;height:700px;"></div>
+<p><em>지도를 확대 또는 축소 해주세요!</em></p> 
+
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=08ac5f210c21cf38bc0484639366ce74"></script>
+<script>
+
+
+	var mapContainer = document.getElementById('map'), // 지도의 중심좌표
+	mapOption = {
+		center : new kakao.maps.LatLng(37.456129, 126.705233), // 지도의 중심좌표
+		level : 3
+	// 지도의 확대 레벨
+	};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+	//마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
+	var positions = [
+
+		<c:forEach items="${list}" var="dto" varStatus="st">
+		<c:if test="${st.index != 0}">,</c:if>
+		{
+		    content: '${dto.sh_name}', 
+		    latlng: new kakao.maps.LatLng(${dto.sh_location1}, ${dto.sh_location2})
+=======
 	
 		var mapContainer = document.getElementById('map'), // 지도의 중심좌표
 		mapOption = {
@@ -78,6 +107,7 @@
 		// for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
 		kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 		kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+>>>>>>> branch 'master' of https://github.com/jejucityboy/schoolsignal.git
 		}
 	
 		//인포윈도우를 표시하는 클로저를 만드는 함수입니다 
@@ -96,6 +126,23 @@
 		
 		
 	
+<<<<<<< HEAD
+
+	var zoomControl = new kakao.maps.ZoomControl();
+	map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+	kakao.maps.event.addListener(map, 'zoom_changed', function() {
+
+		var level = map.getLevel();
+
+		var message = '현재 지도 레벨은 ' + level + ' 입니다';
+		var resultDiv = document.getElementById('result');
+		resultDiv.innerHTML = message;
+
+	});
+	
+</script>
+=======
 		var zoomControl = new kakao.maps.ZoomControl();
 		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 	
@@ -109,6 +156,7 @@
 	
 		});
 	</script>
+>>>>>>> branch 'master' of https://github.com/jejucityboy/schoolsignal.git
 
 
 

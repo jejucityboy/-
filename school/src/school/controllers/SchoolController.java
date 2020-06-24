@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import school.models.SchoolDAO;
 import school.models.SchoolDTO;
 
+
 @WebServlet("/schoolSignal")
 public class SchoolController extends HttpServlet {
 
@@ -23,7 +24,6 @@ public class SchoolController extends HttpServlet {
 
 		request.setAttribute("list", list);
 		request.setAttribute("title", "학교위치");
-		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/schoolSignal/kakaoAPI.jsp");
 		dispatcher.forward(request, response);
 		
